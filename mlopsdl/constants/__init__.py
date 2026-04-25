@@ -11,7 +11,7 @@ MONGODB_URL_KEY = os.getenv("MONGODB_URL")
 PIPELINE_NAME: str = "mlopsdl_pipeline"
 ARTIFACT_DIR: str = "artifact"
 
-FILE_NAME: str = "easyvisa.csv"
+FILE_NAME: str = "EasyVisa.csv"
 TRAIN_FILE_NAME: str = "train.csv"
 
 TEST_FILE_NAME: str = "test.csv"

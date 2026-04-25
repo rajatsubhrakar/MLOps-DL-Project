@@ -33,6 +33,8 @@ def write_yaml_file(file_path: str, content: dict) -> None:
     :param content: The dictionary to write to the YAML file.
     """
     try:
+        dir_path = os.path.dirname(file_path)
+        os.makedirs(dir_path,exist_ok=True)
         with open(file_path, 'w') as yaml_file:
             yaml.safe_dump(content, yaml_file)
             logging.info(f"Successfully wrote to YAML file: {file_path}")
@@ -66,6 +68,8 @@ def save_numpy_array(file_path: str, array: np.ndarray) -> None:
     """
     logging.info("Entered the save_numpy_array method of utils")
     try:
+        dir_path = os.path.dirname(file_path)
+        os.makedirs(dir_path,exist_ok=True)
         np.save(file_path, array)
         logging.info(f"Successfully saved NumPy array to file: {file_path}")
     except Exception as e:
@@ -97,6 +101,8 @@ def save_object(file_path: str, obj) -> None:
     """
     logging.info("Entered the save_object method of utils")
     try:
+        dir_path = os.path.dirname(file_path)
+        os.makedirs(dir_path,exist_ok=True)
         with open(file_path, 'wb') as file:
             dill.dump(obj, file)
             logging.info(f"Successfully saved object to file: {file_path}")
@@ -113,6 +119,7 @@ def drop_columns(df: DataFrame, columns: list) -> DataFrame:
     :return: A new DataFrame with the specified columns dropped.
     """
     try:
+        print(f"Dropping columns: {columns} from DataFrame")
         df_dropped = df.drop(columns=columns)
         logging.info(f"Successfully dropped columns: {columns}")
         return df_dropped

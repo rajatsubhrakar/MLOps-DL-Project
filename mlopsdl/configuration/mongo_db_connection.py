@@ -20,7 +20,7 @@ class MongoDBClient:
             if MongoDBClient.client is None:
                 mongo_db_url = os.getenv("MONGODB_URL")
                 if mongo_db_url is None:
-                    raise MLOpsException(f"MongoDB URL not found in environment variables with key: {"MONGODB_URL"}", sys)
+                    raise MLOpsException(f"MongoDB URL not found in environment variables with key: {mongo_db_url}", sys)
                 MongoDBClient.client = pymongo.MongoClient(mongo_db_url, tlsCAFile=ca)
             self.client = MongoDBClient.client
             self.database = self.client[database_name]

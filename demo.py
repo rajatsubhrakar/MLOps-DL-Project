@@ -1,4 +1,4 @@
-from mlopsdl.pipline.training_pipeline import TrainingPipeline
+from mlopsdl.pipline.training_pipeline import TrainPipeline
 
-obj = TrainingPipeline()
+obj = TrainPipeline()
 obj.run_pipeline()

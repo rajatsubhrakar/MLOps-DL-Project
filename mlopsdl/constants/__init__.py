@@ -6,7 +6,8 @@ load_dotenv()
 
 DATABASE_NAME = "easyvisa"
 COLLECTION_NAME = "easyvisa_collection"
-MONGODB_URL_KEY = os.getenv("MONGODB_URL")
+#MONGODB_URL_KEY = os.getenv("MONGODB_URL")
+MONGODB_URL_KEY = "MONGODB_URL"
 
 PIPELINE_NAME: str = "mlopsdl_pipeline"
 ARTIFACT_DIR: str = "artifact"
@@ -24,8 +25,10 @@ SCHEMA_FILE_PATH = os.path.join("config", "schema.yaml")
 
 
 
-AWS_ACCESS_KEY_ID_ENV_KEY = os.getenv("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY_ENV_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+#AWS_ACCESS_KEY_ID_ENV_KEY = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_ACCESS_KEY_ID_ENV_KEY = "AWS_ACCESS_KEY_ID"
+#AWS_SECRET_ACCESS_KEY_ENV_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
+AWS_SECRET_ACCESS_KEY_ENV_KEY = "AWS_SECRET_ACCESS_KEY"
 REGION_NAME = "us-east-1"
 
 DATA_INGESTION_COLLECTION_NAME: str = "easyvisa_collection"

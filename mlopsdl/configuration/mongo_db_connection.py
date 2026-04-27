@@ -10,7 +10,7 @@ import pymongo
 import certifi
 
 ca = certifi.where()
-load_dotenv()
+
 class MongoDBClient:
 
     client = None

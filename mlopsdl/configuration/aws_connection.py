@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from mlopsdl.constants import AWS_SECRET_ACCESS_KEY_ENV_KEY, AWS_ACCESS_KEY_ID_ENV_KEY,REGION_NAME
 
 
-load_dotenv()
+
 
 class S3Client:
 

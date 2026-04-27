@@ -1,8 +1,8 @@
 import os
 from datetime import date
-from dotenv import load_dotenv
 
-load_dotenv()
+
+
 
 DATABASE_NAME = "easyvisa"
 COLLECTION_NAME = "easyvisa_collection"
